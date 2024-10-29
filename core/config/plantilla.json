@@ -1,0 +1,50 @@
+{
+    "body": {
+        "bd_id": "INTEGER",
+        "bd_head": "INTEGER",
+        "bd_torso": "INTEGER",
+        "bd_left_arm": "INTEGER",
+        "bd_right_arm": "INTEGER",
+        "bd_left_leg": "INTEGER",
+        "bd_right_leg": "INTEGER",
+        "bd_total_life": "INTEGER"
+    },
+    "soul": {
+        "so_id": "INTEGER",
+        "so_name": "TEXT",
+        "so_level": "INTEGER",
+        "so_exp": "INTEGER",
+        "so_gold": "INTEGER",
+        "so_hp": "INTEGER",
+        "so_mp": "INTEGER",
+        "so_str": "INTEGER",
+        "so_dex": "INTEGER",
+        "so_int": "INTEGER",
+        "so_luk": "INTEGER",
+        "so_def": "INTEGER",
+        "so_res": "INTEGER",
+        "so_spd": "INTEGER"
+    },
+    "mapa": {
+        "mp_id": "INTEGER",
+        "mp_nombre": "TEXT",
+        "rm_id": "INTEGER",
+        "mp_room_limit": "INTEGER"
+    },
+    "enemy": {
+        "en_id": "INTEGER",
+        "en_name": "TEXT",
+        "so_id": "INTEGER",
+        "bd_id": "INTEGER",
+        "en_backpack": "TEXT",
+        "en_backpack_lim": "TEXT"
+    },
+    "player": {
+        "pl_id": "INTEGER",
+        "pl_name": "TEXT",
+        "mp_id": "INTEGER",
+        "bd_id": "INTEGER",
+        "so_id": "INTEGER",
+        "mp_position": "INTEGER"
+    }
+}

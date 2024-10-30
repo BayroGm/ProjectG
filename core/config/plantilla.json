@@ -31,6 +31,17 @@
         "rm_id": "INTEGER",
         "mp_room_limit": "INTEGER"
     },
+    "rooms": {
+        "rm_id": "INTEGER",
+        "rm_name": "TEXT",
+        "rm_tipo": "INTEGER",
+        "rm_x": "INTEGER",
+        "rm_y": "INTEGER",
+        "rm_z": "INTEGER",
+        "rm_desc": "TEXT",
+        "rm_items": "TEXT",
+        "rm_monsters": "TEXT"
+    },
     "enemy": {
         "en_id": "INTEGER",
         "en_name": "TEXT",

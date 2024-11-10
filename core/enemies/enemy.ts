@@ -1,22 +1,24 @@
-import type { BIPbody } from "../nucleos/bipedo/body.ts";
-import type { SOUL } from "../nucleos/soul.ts";
-import type { IPlayer } from "./IPlayer.ts";
+import { BIPbody } from "../nucleos/bipedo/body";
+import { armas } from "../nucleos/items/armas/arma";
+import { SOUL } from "../nucleos/soul";
+import { IEnemy } from "./Ienemy";
 
-export class CPlayer implements IPlayer {
+export class CEnemy implements IEnemy {
     id: number;
     nombre: string;
     body: BIPbody;
     soul: SOUL;
-    skills: any
-    clase: any
-    inventory: any
-
-    constructor(player: IPlayer) {
-        this.id = player.id;
-        this.nombre = player.nombre;
-        this.body = player.body;
-        this.soul = player.soul;
-        this.clase = player.clase;
+    skills: object;
+    clase: number;
+    inventory: any[];
+    constructor(enemy: IEnemy) {
+        this.id = enemy.id;
+        this.nombre = enemy.nombre;
+        this.body = enemy.body;
+        this.soul = enemy.soul;
+        this.skills = enemy.skills;
+        this.clase = enemy.clase;
+        this.inventory = enemy.inventory;
     }
 
     async setItemInventori(item, cantidad) {
@@ -51,15 +53,23 @@ export class CPlayer implements IPlayer {
 
     async setItemBody(item, part) {
         try {
-            let contentbody=["item_head","item_torso","item_left_arm","item_right_arm","item_left_leg","item_right_leg"]
-            if(!contentbody.includes(part)){
-                return {status:false,message:'No se puede colocar el item en ese lugar',data:null}
+            let contentbody = ["item_head", "item_torso", "item_left_arm", "item_right_arm", "item_left_leg", "item_right_leg"]
+            if (!contentbody.includes(part)) {
+                return { status: false, message: 'No se puede colocar el item en ese lugar', data: null }
             }
             this.body[`${part}`] = item
-            return {status:true,message:'item colocado',data:null}
+            return { status: true, message: 'item colocado', data: null }
         } catch (error) {
             console.error(error)
         }
     }
-    
+
+    async setDamage(item:armas,objetivo){
+        try {
+            let contentbody=["head","torso","left_arm","right_arm","left_leg","right_leg"]
+            
+        } catch (error) {
+            console.error(error)
+        }
+    }
 }

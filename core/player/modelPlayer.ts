@@ -21,4 +21,4 @@ class MPlayer extends Model {
 // Vincular el modelo a la base de datos
 db.link([MPlayer]);
 
-export { , MPlayer };
+export { MPlayer };

@@ -8,4 +8,5 @@ export interface IPlayer {
   soul: SOUL;
   skills: object;
   clase: number;
+  inventory: Array<any>;
 }

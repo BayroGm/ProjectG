@@ -6,4 +6,10 @@ export interface BIPbody {
     left_leg: 40;
     right_leg: 40;
     total_life: 290;
+    item_head: null|number,
+    item_torso: null|number,
+    item_left_arm: null|number,
+    item_right_arm: null|number,
+    item_left_leg: null|number,
+    item_right_leg: null|number
 }

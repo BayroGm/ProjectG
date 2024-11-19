@@ -86,8 +86,20 @@ export class CEnemy implements IEnemy {
     async setDamage(item: armas, objetivo: string) {
         try {
             let contentbody=["head","torso","left_arm","right_arm","left_leg","right_leg"]
+            if(!contentbody.includes(objetivo)){
+                return {
+                    status: false,
+                    message: "No se puede aplicar el daño en ese lugar",
+                }
+            }
             // COMPROBAMOS SI EL OBJETIVO CUANTA CON ARMADURA
             let objetivoarmadura = this.body[`item_${objetivo}`]
+            if(objetivoarmadura){
+                let damagereducido=objetivoarmadura.def>item.damage?objetivoarmadura.def-item.damage:item.damage-objetivoarmadura.def
+                this.body[`${objetivo}`]-=damagereducido
+            }else{
+                this.body[`${objetivo}`]-=item.damage
+            }
         } catch (error) {
             console.error(error);
         }

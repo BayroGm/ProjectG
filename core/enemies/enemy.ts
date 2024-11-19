@@ -67,7 +67,8 @@ export class CEnemy implements IEnemy {
     async setDamage(item:armas,objetivo){
         try {
             let contentbody=["head","torso","left_arm","right_arm","left_leg","right_leg"]
-            
+            // COMPROBAMOS SI EL OBJETIVO CUANTA CON ARMADURA
+            let objetivoarmadura = this.body[`item_${objetivo}`]
         } catch (error) {
             console.error(error)
         }

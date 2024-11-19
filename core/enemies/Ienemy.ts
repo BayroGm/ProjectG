@@ -1,5 +1,5 @@
-import { BIPbody } from "../nucleos/bipedo/body";
-import { SOUL } from "../nucleos/soul";
+import { BIPbody } from "../nucleos/bipedo/body.ts";
+import { SOUL } from "../nucleos/soul.ts";
 
 export interface IEnemy {
     id: number;
